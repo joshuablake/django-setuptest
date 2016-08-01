@@ -182,6 +182,7 @@ class SetupTestSuite(unittest.TestSuite):
                 self.cov.report(include=include, omit=omit)
                 self.cov.save()
                 self.cov.xml_report(include=include, omit=omit)
+                self.cov.save()
             except misc.CoverageException as e:
                 log.info("Coverage Exception: %s" % e)
 
